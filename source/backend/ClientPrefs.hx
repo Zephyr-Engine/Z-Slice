@@ -19,19 +19,37 @@ import states.TitleState;
 	public var storageType:String = "EXTERNAL_DATA";
 	#end
 	public var hitboxType:String = "Gradient";
-	public var popUpRating:Bool = true;
 	public var vsync:Bool = false;
-	public var vibrating:Bool = false;
-
-	public var favSongIds:Array<String> = [];
-	public var lastFreeplayMod:String = '||bf';
-
+	/*
+	ive decided to sort the settings in here like in JSE's ClientPrefs.hx
+	- prism
+	*/
+	
+	// optimization
+	public var enableGC:Bool = true;
+	public var popUpRating:Bool = true;
+	
+	// gameplay settings
 	public var downScroll:Bool = false;
 	public var middleScroll:Bool = false;
 	public var opponentStrums:Bool = true;
+	public var ghostTapping:Bool = true;
+	public var autoPause:Bool = true;
+	public var noReset:Bool = false;
+	public var hitsoundVolume:Float = 0;
+	public var ratingOffset:Int = 0;
+	public var sickWindow:Int = 45;
+	public var goodWindow:Int = 90;
+	public var badWindow:Int = 135;
+	public var safeFrames:Float = 10;
+	public var guitarHeroSustains:Bool = true;
+	public var vibrating:Bool = false;
+	
+	public var favSongIds:Array<String> = [];
+	public var lastFreeplayMod:String = '||bf';
+
 	public var showFPS:Bool = true;
 	public var flashing:Bool = true;
-	public var autoPause:Bool = true;
 	public var antialiasing:Bool = true;
 	public var noteSkin:String = 'Default';
 	public var splashSkin:String = 'Psych';
@@ -61,12 +79,9 @@ import states.TitleState;
 		[0xFF71E300, 0xFFF6FFE6, 0xFF003100],
 		[0xFFFF884E, 0xFFFFFAF5, 0xFF6C0000]];
 
-	public var ghostTapping:Bool = true;
 	public var timeBarType:String = 'Time Left';
 	public var scoreZoom:Bool = true;
-	public var noReset:Bool = false;
 	public var healthBarAlpha:Float = 1;
-	public var hitsoundVolume:Float = 0;
 	public var pauseMusic:String = 'Tea Time';
 	public var checkForUpdates:Bool = true;
 	public var comboStacking:Bool = true;
@@ -93,12 +108,6 @@ import states.TitleState;
 	];
 
 	public var comboOffset:Array<Int> = [0, 0, 0, 0];
-	public var ratingOffset:Int = 0;
-	public var sickWindow:Int = 45;
-	public var goodWindow:Int = 90;
-	public var badWindow:Int = 135;
-	public var safeFrames:Float = 10;
-	public var guitarHeroSustains:Bool = true;
 	public var discordRPC:Bool = true;
 	public var loadingScreen:Bool = true;
 	public var language:String = 'en-US';

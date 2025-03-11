@@ -16,6 +16,7 @@ class OptionsState extends MusicBeatState
 		'Controls',
 		'Adjust Delay and Combo',
 		'Graphics',
+		'Optimizations',
 		'Visuals',
 		'Gameplay',
 		'V-Slice Options',
@@ -53,6 +54,8 @@ class OptionsState extends MusicBeatState
 					openSubState(new options.ControlsSubState());
 			case 'Graphics':
 				openSubState(new options.GraphicsSettingsSubState());
+			case 'Optimizations':
+				openSubState(new options.OptimizeSettingsSubState());
 			case 'Visuals':
 				openSubState(new options.VisualsSettingsSubState());
 			case 'Gameplay':
