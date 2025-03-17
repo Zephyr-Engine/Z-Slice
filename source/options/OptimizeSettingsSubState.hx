@@ -1,19 +1,16 @@
 package options;
 
-import objects.Character;
 import options.Option;
 
 class OptimizeSettingsSubState extends BaseOptionsMenu
 {
-	var antialiasingOption:Int;
-	var boyfriend:Character = null;
 	public function new()
 	{
 		title = Language.getPhrase('optimization_menu', 'Optimization Settings');
 		rpcTitle = 'Optimization Settings Menu'; //for Discord Rich Presence
 
 		var option:Option = new Option('Enable GC', //Name
-			'If checked, the game can garbage collect,\nmaybe improving performance (?)', //Description
+			'If checked, the game can garbage collect,\nmaybe improving performance\nat a cost of maybe some lag on large charts.', //Description
 			'enableGC', //Save data variable name
 			BOOL); //Variable type
 		addOption(option);

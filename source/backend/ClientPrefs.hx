@@ -26,7 +26,7 @@ import states.TitleState;
 	*/
 	
 	// optimization
-	public var enableGC:Bool = true;
+	public var enableGC:Bool = false;
 	public var popUpRating:Bool = true;
 	
 	// gameplay settings

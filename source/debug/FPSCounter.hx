@@ -88,6 +88,9 @@ class FPSCounter extends TextField
 		textColor = 0xFFFFFFFF;
 		if (currentFPS < FlxG.drawFramerate * 0.5)
 			textColor = 0xFFFF0000;
+
+		if (ClientPrefs.data.enableGC)
+			text += '\nGC Enabled';
 	}
 
 	inline function get_memoryMegas():Float

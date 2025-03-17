@@ -169,6 +169,9 @@ xsi:schemaLocation="http://lime.openfl.org/project/1.0.4 http://lime.openfl.org/
 	
 	<!-- ______________________________ Haxedefines _____________________________ -->
 
+	<!-- Use C++11 Libraries on build -->
+	<haxedef name="HXCPP_CPP11" if="cpp" />
+
 	<!--Enable the Flixel core recording system-->
 	<!--<haxedef name="FLX_RECORD" />-->
 
