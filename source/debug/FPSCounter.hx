@@ -5,6 +5,8 @@ import openfl.text.TextField;
 import openfl.text.TextFormat;
 import openfl.system.System as OpenFlSystem;
 import lime.system.System as LimeSystem;
+import debug.Memory;
+import flixel.util.FlxStringUtil;
 
 /**
 	The FPS class provides an easy-to-use monitor to display
@@ -29,7 +31,13 @@ class FPSCounter extends TextField
 	/**
 		The current memory usage (WARNING: this is NOT your total program memory usage, rather it shows the garbage collector memory)
 	**/
-	public var memoryMegas(get, never):Float;
+	public var memory(get, never):Float;
+	inline function get_memory():Float
+		return Memory.gay();
+
+	var mempeak:Float = 0;
+
+	// ^ from jse
 
 	@:noCompletion private var times:Array<Float>;
 
@@ -82,15 +90,12 @@ class FPSCounter extends TextField
 	{
 		text = 
 		'FPS: $currentFPS' + 
-		'\nMemory: ${flixel.util.FlxStringUtil.formatBytes(memoryMegas)}' +
+		'\nMemory: ' + FlxStringUtil.formatBytes(memory) + '/' + FlxStringUtil.formatBytes(mempeak);
 		os;
 
 		textColor = 0xFFFFFFFF;
 		if (currentFPS < FlxG.drawFramerate * 0.5)
 			textColor = 0xFFFF0000;
-
-		if (ClientPrefs.data.enableGC)
-			text += '\nGC Enabled';
 	}
 
 	inline function get_memoryMegas():Float
