@@ -113,7 +113,19 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 			'hideHud',
 			BOOL);
 		addOption(option);
+
+		var option:Option = new Option('Show NPS', //Name
+			'If checked, the game will show the NPS of both\nthe opponent and the player.', //Description
+			'showNPS', //Save data variable name
+			BOOL); //Variable type
+		addOption(option);
 		
+		var option:Option = new Option('Show Note Count', //Name
+		'If checked, the game shows the amount of notes youve hit.\nNote that this also enables the option above.', //Description
+		'showNoteCount', //Save data variable name
+		BOOL); //Variable type
+		addOption(option);
+
 		var option:Option = new Option('Time Bar:',
 			"What should the Time Bar display?",
 			'timeBarType',

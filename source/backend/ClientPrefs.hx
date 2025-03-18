@@ -48,6 +48,10 @@ import states.TitleState;
 	public var favSongIds:Array<String> = [];
 	public var lastFreeplayMod:String = '||bf';
 
+	// visuals and ui settings
+	public var showNPS:Bool = false;
+	public var showNoteCount:Bool = true;
+
 	public var showFPS:Bool = true;
 	public var flashing:Bool = true;
 	public var antialiasing:Bool = true;
