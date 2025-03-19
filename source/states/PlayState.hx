@@ -599,9 +599,9 @@ class PlayState extends MusicBeatState
 		npsTxt.visible = ClientPrefs.data.showNPS;
 		uiGroup.add(npsTxt);
 
-		if (ClientPrefs.data.showNoteCount)
-			npsTxt.visible = true;
-			npsTxt.text += '\n$bfTotalNotes / $oppTotalNotes';
+		// if (ClientPrefs.data.showNoteCount)
+		// 	npsTxt.visible = true;
+		// 	npsTxt.text += '\n$combo / $oppTotalNotes';
 
 
 		uiGroup.cameras = [camHUD];
@@ -3381,8 +3381,6 @@ class PlayState extends MusicBeatState
 		if(note.wasGoodHit) return;
 		if(cpuControlled && note.ignoreNote) return;
 
-		bfTotalNotes ++;
-
 		var isSus:Bool = note.isSustainNote; //GET OUT OF MY HEAD, GET OUT OF MY HEAD, GET OUT OF MY HEAD
 		var leData:Int = Math.round(Math.abs(note.noteData));
 		var leType:String = note.noteType;
@@ -3448,7 +3446,7 @@ class PlayState extends MusicBeatState
 			{
 				combo++;
 				maxCombo = FlxMath.maxInt(maxCombo,combo);
-				if(combo > 9999) combo = 9999;
+//				if(combo > 9999) combo = 9999; // lets try removing this code and see if shi works
 				popUpScore(note);
 			}
 			var gainHealth:Bool = true; // prevent health gain, *if* sustains are treated as a singular note
