@@ -22,6 +22,12 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			BOOL);
 		addOption(option);
 
+		var option:Option = new Option('Showcase Mode', //Name
+			'If checked, the game forces botplay to be enabled and hides most HUD elements.', //Description
+			'showcaseMode', //Save data variable name
+			BOOL); //Variable type
+		addOption(option);
+
 		var option:Option = new Option('Opponent Notes',
 			'If unchecked, opponent notes get hidden.',
 			'opponentStrums',
