@@ -604,6 +604,12 @@ class PlayState extends MusicBeatState
 		npsTxt.visible = ClientPrefs.data.showNPS;
 		uiGroup.add(npsTxt);
 
+		EngineWatermark = new FlxText(4,FlxG.height * 0.9 + 50,0,"", 16);
+		EngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, OUTLINE,FlxColor.BLACK);
+		EngineWatermark.scrollFactor.set();
+		EngineWatermark.text = SONG.song + ' // Z-Slice ${MainMenuState.zSliceVersion}';
+		add(EngineWatermark);
+
 		// if (ClientPrefs.data.showNoteCount)
 		// 	npsTxt.visible = true;
 		// 	npsTxt.text += '\n$combo / $oppTotalNotes';
