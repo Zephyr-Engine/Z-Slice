@@ -98,8 +98,7 @@ class MainMenuState extends MusicBeatState
 		}
 
 		var psychVer:FlxText = new FlxText(0, FlxG.height - 18, FlxG.width, "Psych Engine " + psychEngineVersion, 12);
-		var fnfVer:FlxText = new FlxText(0, FlxG.height - 18, FlxG.width, 'v${funkinVersion} (P-slice ${pSliceVersion})', 12);
-		var zVer:FlxText = new FlxText(0, FlxG.height - 18, FlxG.width, "Z-Slice " + zSliceVersion, 12);
+		var fnfVer:FlxText = new FlxText(0, FlxG.height - 18, FlxG.width, 'Z-Slice ${zSliceVersion} (P-slice ${pSliceVersion})', 12);
 
 		psychVer.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		fnfVer.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -108,7 +107,6 @@ class MainMenuState extends MusicBeatState
 		fnfVer.scrollFactor.set();
 		add(psychVer);
 		add(fnfVer);
-		add(zVer);
 		//var fnfVer:FlxText = new FlxText(12, FlxG.height - 24, 0, "Friday Night Funkin' ", 12);
 	
 		changeItem();

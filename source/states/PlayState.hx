@@ -590,14 +590,14 @@ class PlayState extends MusicBeatState
 		updateScore(false);
 		uiGroup.add(scoreTxt);
 
-		botplayTxt = new FlxText(400, healthBar.y - 180, FlxG.width - 800, Language.getPhrase("Botplay").toUpperCase(), 32);
+		botplayTxt = new FlxText(400, timeBar.y + 55, FlxG.width - 800, Language.getPhrase("Botplay").toUpperCase(), 32);
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
 		botplayTxt.visible = cpuControlled;
 		uiGroup.add(botplayTxt);
 		if(ClientPrefs.data.downScroll)
-			botplayTxt.y = healthBar.y + 70;
+			botplayTxt.y = timeBar.y + 70;
 		
 		npsTxt = new FlxText(400, healthBar.y - 90, FlxG.width - 800, '\n$bfNPS / $bfNPSmax\n$oppNPS / $oppNPSmax', 32);
 		npsTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -609,6 +609,8 @@ class PlayState extends MusicBeatState
 		EngineWatermark.scrollFactor.set();
 		EngineWatermark.text = SONG.song + ' // Z-Slice ${MainMenuState.zSliceVersion}';
 		add(EngineWatermark);
+
+		if (EngineWatermark != null) EngineWatermark.cameras = [camHUD];
 
 		// if (ClientPrefs.data.showNoteCount)
 		// 	npsTxt.visible = true;
