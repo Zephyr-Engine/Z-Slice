@@ -90,12 +90,12 @@ class TitleState extends MusicBeatState
 		if (ClientPrefs.data.checkForUpdates && !closedState)
 		{
 			trace('checking for update');
-			var http = new haxe.Http("https://raw.githubusercontent.com/mikolka9144/P-Slice/master/gitVersion.txt");
+			var http = new haxe.Http("https://raw.githubusercontent.com/prismGT/Z-Slice/refs/heads/master/gitVersion.txt");
 
 			http.onData = function(data:String)
 			{
 				updateVersion = data.split('\n')[0].trim();
-				var curVersion:String = MainMenuState.pSliceVersion.trim();
+				var curVersion:String = MainMenuState.zSliceVersion.trim();
 				trace('version online: ' + updateVersion + ', your version: ' + curVersion);
 				if (updateVersion != curVersion)
 				{

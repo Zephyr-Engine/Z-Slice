@@ -16,12 +16,11 @@ class OutdatedState extends MusicBeatState
 		final bro:String = #if mobile 'kiddo' #else 'bro' #end;
 		final escape:String = (controls.mobileC) ? 'B' : 'ESCAPE';
 
-		guh = "Sup "+bro+", looks like you're running an   \n
-		outdated version of P-Slice Engine (" + MainMenuState.pSliceVersion + "),\n
-		please update to " + TitleState.updateVersion + "!\n
-		Press "+escape+" to proceed anyway.\n
-		\n
-		Thank you for using the Engine!";
+		guh = "Hello! You are using an\n
+		outdated version of Z-Slice.\n
+		It is recommended to update\n
+		to get the newest features.\n
+		Thanks for using Z-Slice!";
 
 		warnText = new FlxText(0, 0, FlxG.width, guh, 32);
 		warnText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER);
@@ -37,7 +36,7 @@ class OutdatedState extends MusicBeatState
 		if(!leftState) {
 			if (controls.ACCEPT) {
 				leftState = true;
-				CoolUtil.browserLoad("https://github.com/Psych-Slice/P-Slice/releases");
+				CoolUtil.browserLoad("https://github.com/prismGT/Z-Slice/releases");
 			}
 			else if(controls.BACK) {
 				leftState = true;

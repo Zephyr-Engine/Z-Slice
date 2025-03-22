@@ -598,11 +598,6 @@ class PlayState extends MusicBeatState
 		uiGroup.add(botplayTxt);
 		if(ClientPrefs.data.downScroll)
 			botplayTxt.y = timeBar.y + 70;
-		
-		npsTxt = new FlxText(400, healthBar.y - 90, FlxG.width - 800, '\n$bfNPS / $bfNPSmax\n$oppNPS / $oppNPSmax', 32);
-		npsTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		npsTxt.visible = ClientPrefs.data.showNPS;
-		uiGroup.add(npsTxt);
 
 		EngineWatermark = new FlxText(4,FlxG.height * 0.9 + 50,0,"", 16);
 		EngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, OUTLINE,FlxColor.BLACK);
@@ -611,11 +606,6 @@ class PlayState extends MusicBeatState
 		add(EngineWatermark);
 
 		if (EngineWatermark != null) EngineWatermark.cameras = [camHUD];
-
-		// if (ClientPrefs.data.showNoteCount)
-		// 	npsTxt.visible = true;
-		// 	npsTxt.text += '\n$combo / $oppTotalNotes';
-
 
 		uiGroup.cameras = [camHUD];
 		noteGroup.cameras = [camHUD];
