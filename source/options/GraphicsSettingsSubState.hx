@@ -61,6 +61,15 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 		option.onChange = onChangeFramerate;
 		#end
 
+		#if sys
+		var option:Option = new Option('VSync',
+			'If checked, Enables VSync fixing any screen tearing at the cost of capping the FPS to screen refresh rate.\n(Must restart the game to have an effect)',
+			'vsync',
+			BOOL);
+		option.onChange = onChangeVSync;
+		addOption(option);
+		#end
+
 		super();
 		insert(1, boyfriend);
 	}
@@ -95,4 +104,14 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 		super.changeSelection(change);
 		boyfriend.visible = (antialiasingOption == curSelected);
 	}
+
+	#if sys
+	function onChangeVSync()
+	{
+		var file:String = StorageUtil.rootDir + "vsync.txt";
+		if(FileSystem.exists(file))
+			FileSystem.deleteFile(file);
+		File.saveContent(file, Std.string(ClientPrefs.data.vsync));
+	}
+	#end
 }

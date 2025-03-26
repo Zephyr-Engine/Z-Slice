@@ -19,7 +19,6 @@ import states.TitleState;
 	public var storageType:String = "EXTERNAL_DATA";
 	#end
 	public var hitboxType:String = "Gradient";
-	public var vsync:Bool = false;
 	/*
 	ive decided to sort the settings in here like in JSE's ClientPrefs.hx
 	- prism
@@ -46,29 +45,46 @@ import states.TitleState;
 	public var guitarHeroSustains:Bool = true;
 	public var vibrating:Bool = false;
 	
+	// where do these go
 	public var favSongIds:Array<String> = [];
 	public var lastFreeplayMod:String = '||bf';
-
-	public var showFPS:Bool = true;
-	public var flashing:Bool = true;
-	public var antialiasing:Bool = true;
+	
+	// visuals and ui settings
 	public var noteSkin:String = 'Default';
 	public var splashSkin:String = 'Psych';
 	public var holdSkin:String = 'Vanilla';
 	public var splashAlpha:Float = 0.6;
 	public var holdSplashAlpha:Float = 0.6;
+	public var hideHud:Bool = false;
+	public var timeBarType:String = 'Time Left';
+	public var flashing:Bool = true;
+	public var camZooms:Bool = true;
+	public var scoreZoom:Bool = true;
+	public var healthBarAlpha:Float = 1;
+	public var showFPS:Bool = true;
+	public var pauseMusic:String = 'Tea Time';
+	public var checkForUpdates:Bool = true;
+	public var comboStacking:Bool = true;
+	
+	// graphics
 	public var lowQuality:Bool = false;
+	public var antialiasing:Bool = true;
 	public var shaders:Bool = true;
 	public var cacheOnGPU:Bool = #if !switch false #else true #end; //From Stilic
 	public var framerate:Int = 60;
-	public var camZooms:Bool = true;
-	public var hideHud:Bool = false;
+	public var vsync:Bool = false;
+
+	// v-slice settings
 	public var vsliceFreeplayColors:Bool = true;
 	public var vsliceResults:Bool = true;
 	public var vsliceSpecialCards:Bool = true;
 	public var vsliceSmoothBar:Bool = true;
 	public var vsliceForceNewTag:Bool = false;
+	
+	// note offset shit
 	public var noteOffset:Int = 0;
+
+	// note colors
 	public var arrowRGB:Array<Array<FlxColor>> = [
 		[0xFFC24B99, 0xFFFFFFFF, 0xFF3C1F56],
 		[0xFF00FFFF, 0xFFFFFFFF, 0xFF1542B7],
@@ -80,12 +96,6 @@ import states.TitleState;
 		[0xFF71E300, 0xFFF6FFE6, 0xFF003100],
 		[0xFFFF884E, 0xFFFFFAF5, 0xFF6C0000]];
 
-	public var timeBarType:String = 'Time Left';
-	public var scoreZoom:Bool = true;
-	public var healthBarAlpha:Float = 1;
-	public var pauseMusic:String = 'Tea Time';
-	public var checkForUpdates:Bool = true;
-	public var comboStacking:Bool = true;
 	public var gameplaySettings:Map<String, Dynamic> = [
 		'scrollspeed' => 1.0,
 		'scrolltype' => 'multiplicative', 

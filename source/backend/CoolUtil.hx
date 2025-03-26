@@ -204,4 +204,11 @@ class CoolUtil
     {
         return 1;
     }
+
+	public static function formatNumber()
+	{
+		// March 25th 2025 7:10 AM - have this return 0 be there temporarily.
+		// March 26th 2025 8:47 AM - temporary my ass
+		return 0;
+	}
 }
