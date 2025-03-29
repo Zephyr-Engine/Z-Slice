@@ -56,6 +56,7 @@ import states.TitleState;
 	public var splashAlpha:Float = 0.6;
 	public var holdSplashAlpha:Float = 0.6;
 	public var hideHud:Bool = false;
+	public var showWatermark:Bool = true;
 	public var timeBarType:String = 'Time Left';
 	public var flashing:Bool = true;
 	public var camZooms:Bool = true;

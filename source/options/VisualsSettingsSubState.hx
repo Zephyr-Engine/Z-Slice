@@ -114,6 +114,12 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 			BOOL);
 		addOption(option);
 
+		var option:Option = new Option('Show Watermark',
+                        'If checked, the engine watermark will be hidden.',
+                        'showWatermark',
+                        BOOL);
+                addOption(option);
+
 		var option:Option = new Option('Time Bar:',
 			"What should the Time Bar display?",
 			'timeBarType',

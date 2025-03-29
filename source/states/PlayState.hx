@@ -603,6 +603,7 @@ class PlayState extends MusicBeatState
 		// like i said, all engine watermark code is from JSE !!
 		EngineWatermark = new FlxText(4,FlxG.height * 0.9 + 50,0,"", 16);
 		EngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, OUTLINE,FlxColor.BLACK);
+		EngineWatermark.visible = ClientPrefs.data.showWatermark;
 		EngineWatermark.scrollFactor.set();
 		EngineWatermark.text = SONG.song + ' // Z-Slice ${MainMenuState.zSliceVersion}';
 		add(EngineWatermark);
