@@ -355,7 +355,7 @@ class PlayState extends MusicBeatState
 		Conductor.mapBPMChanges(SONG);
 		Conductor.bpm = SONG.bpm;
 
-		if (!ClientPrefs.data.showcaseMode)
+		if (ClientPrefs.data.showcaseMode = true)
 			cpuControlled = true;
 
 		#if DISCORD_ALLOWED
