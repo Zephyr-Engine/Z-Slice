@@ -217,7 +217,8 @@ class PlayState extends MusicBeatState
 
 	public var botplaySine:Float = 0;
 	public var botplayTxt:FlxText;
-
+	
+	// all the engine watermark code is from JSE
 	public var EngineWatermark:FlxText;
 
 	public var iconP1:HealthIcon;
@@ -599,6 +600,7 @@ class PlayState extends MusicBeatState
 		if(ClientPrefs.data.downScroll)
 			botplayTxt.y = timeBar.y + 70;
 
+		// like i said, all engine watermark code is from JSE !!
 		EngineWatermark = new FlxText(4,FlxG.height * 0.9 + 50,0,"", 16);
 		EngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, OUTLINE,FlxColor.BLACK);
 		EngineWatermark.scrollFactor.set();
