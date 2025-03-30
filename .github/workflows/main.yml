@@ -16,26 +16,26 @@ jobs:
           - name: Windows
             os: windows-2022
             buildArgs: windows
-            artifactName: Z-Slice.0.0.1.windows
+            artifactName: P-Slice.1.0.windows
             setupScript: .\"setup/windows.bat"
             artifactPath: export\release\windows\bin\*
           - name: Linux
             os: ubuntu-22.04
             buildArgs: linux
             setupScript: sh ./setup/unix.sh
-            artifactName: Z-Slice.0.0.1.linux
+            artifactName: P-Slice.1.0.linux
             artifactPath: export/release/linux/bin/*
           - name: macOS x86_64
             os: macos-14
             buildArgs: "mac -64 -D HXCPP_M64"
             setupScript: sh ./setup/mobile.sh
-            artifactName: Z-Slice.0.0.1.macosx64
+            artifactName: P-Slice.1.0.macosx64
             artifactPath: export/release/macos/bin/*
           - name: macOS AArch64
             os: macos-15
             buildArgs: mac
             setupScript: sh ./setup/mobile.sh
-            artifactName: Z-Slice.0.0.1.macos-applesilicon
+            artifactName: P-Slice.1.0.macosarm64
             artifactPath: export/release/macos/bin/*
     uses: ./.github/workflows/build.yml
     with:
@@ -54,13 +54,13 @@ jobs:
             os: macos-15
             buildArgs: "android"
             setupScript: sh ./setup/mobile.sh
-            artifactName: Z-Slice.0.0.1.android
+            artifactName: P-Slice.1.0.android
             artifactPath: "export/release/android/bin/app/build/outputs/apk/release/*.apk"
           - name: iOS
             os: macos-15
             buildArgs: "ios -nosign"
             setupScript: sh ./setup/mobile.sh
-            artifactName: Z-Slice.0.0.1.ios
+            artifactName: P-Slice.1.0.ios
             artifactPath: "export/release/ios/build/Release-iphoneos/*.ipa"
     uses: ./.github/workflows/build.yml
     with:
