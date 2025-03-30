@@ -24,7 +24,7 @@ on:
 
 env:
   HAXE_VERSION: 4.3.6
-  PROJECT_NAME: ZSlice
+  PROJECT_NAME: PSliceEngine
 
 jobs:
   build:
