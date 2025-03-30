@@ -27,7 +27,10 @@ import states.TitleState;
 	// optimization
 	public var enableGC:Bool = false;
 	public var popUpRating:Bool = true;
-	
+
+	// customization
+	public var watermarkStyle:String = 'Z-Slice';
+
 	// gameplay settings
 	public var downScroll:Bool = false;
 	public var middleScroll:Bool = false;

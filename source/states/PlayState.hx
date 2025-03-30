@@ -610,6 +610,13 @@ class PlayState extends MusicBeatState
 
 		if (EngineWatermark != null) EngineWatermark.cameras = [camHUD];
 
+		// customizing watermark to whatever ya want
+		switch(ClientPrefs.data.watermarkStyle)
+		{	case 'Z-Slice': EngineWatermark.text = SONG.song + ' // Z-Slice ${MainMenuState.zSliceVersion}';
+										case 'Strident Engine': EngineWatermark.text = SONG.song + ' - ' + storyDifficultyText + ' - Z-Slice V1';
+																		case 'Dave and Bambi': EngineWatermark.text = SONG.song;
+										}
+
 		uiGroup.cameras = [camHUD];
 		noteGroup.cameras = [camHUD];
 		comboGroup.cameras = [camHUD];
