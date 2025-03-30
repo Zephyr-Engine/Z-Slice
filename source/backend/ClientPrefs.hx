@@ -34,7 +34,6 @@ import states.TitleState;
 	// gameplay settings
 	public var downScroll:Bool = false;
 	public var middleScroll:Bool = false;
-	public var showcaseMode:Bool = false;
 	public var opponentStrums:Bool = true;
 	public var ghostTapping:Bool = true;
 	public var autoPause:Bool = true;
