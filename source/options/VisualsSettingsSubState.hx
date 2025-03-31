@@ -131,7 +131,7 @@ class VisualsSettingsSubState extends BaseOptionsMenu
                         "Customize your engine watermark!",
                         'watermarkStyle',
                         STRING,
-                        ['Z-Slice', 'Strident Engine', 'Dave and Bambi']);
+                        ['Z-Slice', 'Strident Engine', 'Dave and Bambi', 'DnB 2.5']);
                 addOption(option);
 
 		var option:Option = new Option('Flashing Lights',

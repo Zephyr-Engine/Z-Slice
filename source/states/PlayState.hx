@@ -588,7 +588,7 @@ class PlayState extends MusicBeatState
 		updateScore(false);
 		uiGroup.add(scoreTxt);
 
-		botplayTxt = new FlxText(400, timeBar.y + 55, FlxG.width - 800, Language.getPhrase("Botplay").toUpperCase(), 32);
+		botplayTxt = new FlxText(400, timeBar.y + 55, FlxG.width - 800, Language.getPhrase("Auto").toUpperCase(), 32);
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
@@ -612,6 +612,8 @@ class PlayState extends MusicBeatState
 		{	case 'Z-Slice': EngineWatermark.text = SONG.song + ' // Z-Slice ${MainMenuState.zSliceVersion}';
 										case 'Strident Engine': EngineWatermark.text = SONG.song + ' - ' + storyDifficultyText + ' - Z-Slice V1';
 																		case 'Dave and Bambi': EngineWatermark.text = SONG.song;
+
+																case 'DnB 2.5': EngineWatermark.text = SONG.song + ' ' + storyDifficultyText + ' - Z-Slice (P-Slice 2.3.1)';
 										}
 		/*
 		   this fuckass formatting for the code
