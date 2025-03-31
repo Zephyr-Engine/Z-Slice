@@ -613,7 +613,7 @@ class PlayState extends MusicBeatState
 										case 'Strident Engine': EngineWatermark.text = SONG.song + ' - ' + storyDifficultyText + ' - Z-Slice V1';
 																		case 'Dave and Bambi': EngineWatermark.text = SONG.song;
 
-																case 'DnB 2.5': EngineWatermark.text = SONG.song + ' ' + storyDifficultyText + ' - Z-Slice (P-Slice 2.3.1)';
+																case 'DnB 2.5': EngineWatermark.text = SONG.song + ' ' + storyDifficultyText + ' - Dave Engine (Z-Slice 2.3.1)';
 										}
 		/*
 		   this fuckass formatting for the code
