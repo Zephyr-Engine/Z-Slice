@@ -174,7 +174,7 @@ class UserErrorSubstate extends MusicBeatSubstate
                 printToTrace('TIME:${date_split[1].rpad(" ",9)} DATE:${date_split[0]}');
                 printToTrace('MOD:${error.activeMod.rpad(" ",10)} PE:${MainMenuState.psychEngineVersion.rpad(" ", 5)} SYS:${error.systemName}');
                 printSpaceToTrace();
-                if(isCritical) printToTrace('REPORT TO GITHUB.COM/MIKOLKA9144/P-SLICE');
+                if(isCritical) printToTrace('REPORT TO GITHUB.COM/PRISMGT/Z-SLICE');
                 else printToTrace('');
                 if(isCritical){
                     if(controls.mobileC) printToTrace('TAP ANYWHERE TO RESTART');
@@ -196,7 +196,7 @@ class UserErrorSubstate extends MusicBeatSubstate
             var star = #if CHECK_FOR_UPDATES "" #else "*" #end;
             dateNow = dateNow.replace(' ', '_');
             dateNow = dateNow.replace(':', "'");
-            errMsg += 'P-Slice ${MainMenuState.pSliceVersion}$star\n';
+            errMsg += 'Z-Slice ${MainMenuState.pSliceVersion}$star\n';
             errMsg += '\nUncaught Error: ' + error.message + "\n";
             for (x in error.extendedTrace)
             {
@@ -206,13 +206,13 @@ class UserErrorSubstate extends MusicBeatSubstate
             errMsg += 'Active mod: ${error.activeMod}\n';
             errMsg += 'Platform: ${error.systemName}\n';
             errMsg += '\n';
-            errMsg += '\nPlease report this error to the GitHub page: https://github.com/Psych-Slice/P-Slice\n\n> Crash Handler written by: sqirra-rng';
+            errMsg += '\nPlease report this error to the GitHub page: https://github.com/prismGT/Z-Slice\n\n> Crash Handler written by: sqirra-rng';
     
             #if !LEGACY_PSYCH
             @:privateAccess // lazy
             backend.CrashHandler.saveErrorMessage(errMsg + '\n');
             #else
-            var path = './crash/' + 'PSlice_' + dateNow + '.txt';
+            var path = './crash/' + 'ZSlice_' + dateNow + '.txt';
             File.saveContent(path, errMsg + '\n');
             #end
             Sys.println(errMsg);
