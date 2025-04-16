@@ -13,5 +13,21 @@
 <p align="center">
   <a href="BUILDING.md">Guide for compiling</a>
   <br>
-  i still need to figure out what to say here
+</p>
+<h1 align="center">
+  Hello!
+</h1>
+<p align="center">
+  This is the official GitHub repository for the WIP Friday Night Funkin' engine Z-Slice.
+  <br>
+  This engine is also used in the DnB fan mod called "DnB: Broken Reality"!
+  <br>
+</p>
+<h1 align="center">
+  Versioning
+</h1>
+<p align="center">
+  Z-Slice uses <a href="https://semver.org/">Semantic Versioning</a> as of 4/16/2025 (mm/dd/yyyy),
+  <br>
+  this means versions are formatted as x.y.z, examples are: 1.9.0, 1.10.0, 1.19.0, and basically every version of Minecraft since 1.0 (?).
 </p>
