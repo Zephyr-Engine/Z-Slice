@@ -22,7 +22,7 @@
   <br>
   This engine is also used in the DnB fan mod called "DnB: Broken Reality"!
   <br>
-  If you can, please provide Windows, Mac (Apple Silicon and/or Intel), iOS and Android builds and test on those platforms.
+  If you can, please provide Windows, Mac (Apple Silicon), iOS and Android builds and test on those platforms.
   <br>
   Contact me on Discord (" prismgt. ") if needed.
   <br>
