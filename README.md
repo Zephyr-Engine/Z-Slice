@@ -33,5 +33,5 @@
 <p align="center">
   Z-Slice uses <a href="https://semver.org/">Semantic Versioning</a> as of 4/16/2025 (mm/dd/yyyy),
   <br>
-  this means versions are formatted as x.y.z, examples are: 1.9.0, 1.10.0, 1.19.0, and basically every version of Minecraft since 1.0 (?).
+  this means versions are formatted as x.y.z, examples are: 1.9.0, 1.10.0, 1.19.0, etc.
 </p>
