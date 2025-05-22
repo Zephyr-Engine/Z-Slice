@@ -563,14 +563,14 @@ class PlayState extends MusicBeatState
 		healthBar.screenCenter(X);
 		healthBar.leftToRight = false;
 		healthBar.scrollFactor.set();
-		healthBar.visible = !ClientPrefs.data.hideHud;
+		healthBar.visible = !ClientPrefs.data.hideHud && ClientPrefs.data.showcaseMode;
 		healthBar.alpha = ClientPrefs.data.healthBarAlpha;
 		reloadHealthBarColors();
 		uiGroup.add(healthBar);
 
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
 		iconP1.y = healthBar.y - 75;
-		iconP1.visible = !ClientPrefs.data.hideHud;
+		iconP1.visible = !ClientPrefs.data.hideHud && ClientPrefs.data.showcaseMode;
 		iconP1.alpha = ClientPrefs.data.healthBarAlpha;
 		uiGroup.add(iconP1);
 
@@ -584,11 +584,11 @@ class PlayState extends MusicBeatState
 		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
-		scoreTxt.visible = !ClientPrefs.data.hideHud;
+		scoreTxt.visible = !ClientPrefs.data.hideHud && ClientPrefs.data.showcaseMode;
 		updateScore(false);
 		uiGroup.add(scoreTxt);
 
-		botplayTxt = new FlxText(400, timeBar.y + 55, FlxG.width - 800, Language.getPhrase("Auto").toUpperCase(), 32);
+		botplayTxt = new FlxText(400, timeBar.y + 55, FlxG.width - 800, 'BOTPLAY', 32);
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
@@ -607,19 +607,9 @@ class PlayState extends MusicBeatState
 
 		if (EngineWatermark != null) EngineWatermark.cameras = [camHUD];
 
-		// customizing watermark to whatever ya want
-		switch(ClientPrefs.data.watermarkStyle)
-		{	case 'Z-Slice': EngineWatermark.text = SONG.song + ' // Z-Slice ${MainMenuState.zSliceVersion}';
-										case 'Strident Engine': EngineWatermark.text = SONG.song + ' - ' + storyDifficultyText + ' - Z-Slice V1';
-																		case 'Dave and Bambi': EngineWatermark.text = SONG.song;
-
-																case 'DnB 2.5': EngineWatermark.text = SONG.song + ' ' + storyDifficultyText + ' - Dave Engine (Z-Slice 2.3.1)';
-										}
-		/*
-		   this fuckass formatting for the code
-		   was intentional.
-		   dont put me in prison please :(
-		*/
+		if (ClientPrefs.data.showcaseMode) {
+			cpuControlled = true;
+		}
 
 		uiGroup.cameras = [camHUD];
 		noteGroup.cameras = [camHUD];

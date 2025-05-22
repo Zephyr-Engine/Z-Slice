@@ -127,13 +127,6 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 			['Time Left', 'Time Elapsed', 'Song Name', 'Disabled']);
 		addOption(option);
 
-		var option:Option = new Option('Watermark Style',
-                        "Customize your engine watermark!",
-                        'watermarkStyle',
-                        STRING,
-                        ['Z-Slice', 'Strident Engine', 'Dave and Bambi', 'DnB 2.5']);
-                addOption(option);
-
 		var option:Option = new Option('Flashing Lights',
 			"Uncheck this if you're sensitive to flashing lights!",
 			'flashing',
