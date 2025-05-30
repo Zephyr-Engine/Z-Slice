@@ -23,6 +23,9 @@ import states.TitleState;
 	ive decided to sort the settings in here like in JSE's ClientPrefs.hx
 	- prism
 	*/
+
+	// WIP
+	public var faUI:Bool = false;
 	
 	// optimization
 	public var enableGC:Bool = false;

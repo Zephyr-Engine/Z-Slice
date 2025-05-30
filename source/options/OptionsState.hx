@@ -20,6 +20,7 @@ class OptionsState extends MusicBeatState
 		'Visuals',
 		'Gameplay',
 		'V-Slice Options',
+		'W.I.P.',
 		#if TRANSLATIONS_ALLOWED  'Language', #end
 		#if (TOUCH_CONTROLS_ALLOWED || mobile)'Mobile Options' #end
 	];
@@ -64,6 +65,8 @@ class OptionsState extends MusicBeatState
 				MusicBeatState.switchState(new options.NoteOffsetState());
 			case 'V-Slice Options':
 				openSubState(new BaseGameSubState());
+			case 'W.I.P.':
+				openSubState(new options.WipSettingsSubState());
 			#if (TOUCH_CONTROLS_ALLOWED || mobile)
 			case 'Mobile Options':
 				openSubState(new mobile.options.MobileOptionsSubState());
