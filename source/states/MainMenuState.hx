@@ -51,6 +51,9 @@ class MainMenuState extends MusicBeatState
 		DiscordClient.changePresence("In the Menus", null);
 		#end
 
+		if (ClientPrefs.data.outdatedTest) {
+			MusicBeatState.switchState(new OutdatedState());
+		}
 
 		persistentUpdate = persistentDraw = true;
 

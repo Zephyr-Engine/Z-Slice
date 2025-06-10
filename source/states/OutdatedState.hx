@@ -1,9 +1,12 @@
 package states;
 
+import options.OptionsState;
+
 class OutdatedState extends MusicBeatState
 {
 	public static var leftState:Bool = false;
 
+	public var outdatedTest = ClientPrefs.data.outdatedTest;
 	var warnText:FlxText;
 	override function create()
 	{
@@ -20,7 +23,10 @@ class OutdatedState extends MusicBeatState
 		outdated version of Z-Slice.\n
 		It is recommended to update\n
 		to get the newest features.\n
-		Thanks for using Z-Slice!";
+		Thanks for using Z-Slice!\n
+		\n
+		Press ENTER to view the release page\n
+		Press ESCAPE to ignore";
 
 		warnText = new FlxText(0, 0, FlxG.width, guh, 32);
 		warnText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER);
@@ -47,7 +53,12 @@ class OutdatedState extends MusicBeatState
 				FlxG.sound.play(Paths.sound('cancelMenu'));
 				FlxTween.tween(warnText, {alpha: 0}, 1, {
 					onComplete: function (twn:FlxTween) {
-						MusicBeatState.switchState(new MainMenuState());
+						if (!outdatedTest) {
+							MusicBeatState.switchState(new MainMenuState());
+						}
+						if (outdatedTest) {
+							MusicBeatState.switchState(new options.DebugSettingsSubState());
+						}
 					}
 				});
 			}

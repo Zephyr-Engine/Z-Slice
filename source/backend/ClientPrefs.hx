@@ -24,8 +24,15 @@ import states.TitleState;
 	- prism
 	*/
 
-	// WIP
-	public var faUI:Bool = false;
+	// this is just for warnings n stuff
+	public var openDoor:String = '!';
+
+	// WIP Settings
+	public var betterRecycle:Bool = false;
+	public var showNPS:Bool = false;
+
+	// debug
+	public var outdatedTest:Bool = false;
 	
 	// optimization
 	public var enableGC:Bool = false;
